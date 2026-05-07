@@ -1,5 +1,5 @@
-import BatomDecorativo from "./BatomDecorativo"
-import styles from "./papelcarta.module.css"
+import BatomDecorativo from "./BatomDecorativo";
+import styles from "./papelcarta.module.css";
 
 // Texto editável — substitua pelo seu próprio
 const TEXTO_CARTA = {
@@ -10,12 +10,11 @@ const TEXTO_CARTA = {
     "Por um ano juntos e por todas as memórias que ainda vamos criar.",
   ],
   despedida: "Com todo o meu amor,",
-}
+};
 
 export default function PapelCarta() {
   return (
     <article className={styles.papel} ariaa-label="Carta de aniversário">
-      
       <div className={styles.bordaRasgadaSuperior} aria-hidden="true" />
 
       <div className={styles.conteudo}>
@@ -38,5 +37,5 @@ export default function PapelCarta() {
 
       <div className={styles.bordaRasgadaInferior} aria-hidden="true" />
     </article>
-  )
+  );
 }

@@ -10,8 +10,6 @@
   z-index: 1;
 }
 
-
-
 .areaCarta {
   position: relative;
   width: 100%;
@@ -31,10 +29,8 @@
 
 .containerPapel {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
-
-
 
 .areaEnvelopeInferior {
   width: 100%;

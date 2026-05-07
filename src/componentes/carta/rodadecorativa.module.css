@@ -1,8 +1,9 @@
 .container {
   position: absolute;
-  top: -70px;
-  left: 50%;
+  top: -30px;
+  left: -190px;
   transform: translateX(-50%);
+  transform: rotate(-10deg);
   width: 140px;
   pointer-events: none;
   z-index: 2;

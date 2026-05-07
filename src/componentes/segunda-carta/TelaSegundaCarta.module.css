@@ -41,7 +41,6 @@
   z-index: 1;
   background: linear-gradient(160deg, var(--vermelho-vivo) 0%, #8b0000 60%, #6a0000 100%);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  /* Aba aberta: virada para cima */
   transform: scaleY(-1);
   transform-origin: top center;
 }

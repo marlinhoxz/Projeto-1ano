@@ -1,18 +1,16 @@
-import CarimboSelo from "@/componentes/envelope/CarimboSelo"
-import styles from "./envelope.module.css"
+import CarimboSelo from "@/componentes/envelope/CarimboSelo";
+import styles from "./envelopeInferior.module.css";
 
 type PropsEnvelopeInferior = {
-  aoAvancar: () => void
-}
+  aoAvancar: () => void;
+};
 
 export default function EnvelopeInferior({ aoAvancar }: PropsEnvelopeInferior) {
   return (
     <div className={styles.container}>
       <div className={styles.envelope}>
-        
         <div className={styles.aba} aria-hidden="true" />
 
-        
         <div className={styles.corpo}>
           <div className={styles.dobras} aria-hidden="true">
             <div className={styles.dobraEsq} />
@@ -30,5 +28,5 @@ export default function EnvelopeInferior({ aoAvancar }: PropsEnvelopeInferior) {
         </div>
       </div>
     </div>
-  )
+  );
 }
