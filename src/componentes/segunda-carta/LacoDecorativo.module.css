@@ -1,0 +1,10 @@
+.container {
+  width: min(180px, 55vw);
+  pointer-events: none;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+}

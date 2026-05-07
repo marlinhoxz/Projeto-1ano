@@ -1,0 +1,113 @@
+.secaoEnvelope {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  gap: 2.5rem;
+  padding: 2rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--creme);
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.4;
+}
+
+.envelope {
+  position: relative;
+  width: min(280px, 80vw);
+  aspect-ratio: 3 / 2;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.5));
+}
+
+.abaEnvelope {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  z-index: 3;
+  transform-origin: top center;
+  perspective: 600px;
+}
+
+.abaTriangulo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    160deg,
+    var(--vermelho-vivo) 0%,
+    #8b0000 60%,
+    #6a0000 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.corpoEnvelope {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #a00010 0%,
+    var(--vermelho-medio) 40%,
+    #6a0000 100%
+  );
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dobrasLaterais {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dobraEsquerda,
+.dobraDireita {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  opacity: 0.25;
+}
+
+.dobraEsquerda {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.dobraDireita {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.dobraInferior {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15), transparent);
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+.centroCara {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}

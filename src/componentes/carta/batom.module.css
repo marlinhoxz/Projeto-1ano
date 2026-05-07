@@ -1,0 +1,11 @@
+.container {
+  width: 80px;
+  opacity: 0.75;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+}

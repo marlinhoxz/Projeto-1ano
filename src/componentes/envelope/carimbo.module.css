@@ -1,0 +1,91 @@
+.carimbo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.circuloExterno {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--ouro-claro) 0%,
+    var(--ouro) 25%,
+    #a07830 50%,
+    var(--ouro) 75%,
+    var(--ouro-claro) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carimbo:hover .circuloExterno {
+  transform: scale(1.08);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(201, 168, 76, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.carimbo:active .circuloExterno {
+  transform: scale(0.96);
+}
+
+.circuloInterno {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--ouro-claro), #8b6520);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icone {
+  width: 28px;
+  height: 28px;
+  color: rgba(74, 0, 0, 0.8);
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.2));
+}
+
+.textoClick {
+  font-family: var(--fonte-corpo);
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--ouro-claro);
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+
+.grande .circuloExterno {
+  width: 72px;
+  height: 72px;
+}
+
+.grande .circuloInterno {
+  width: 56px;
+  height: 56px;
+}
+
+.grande .icone {
+  width: 36px;
+  height: 36px;
+}
+
+.grande .textoClick {
+  font-size: 0.75rem;
+}

@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+
+.envelope {
+  position: relative;
+  width: min(200px, 60vw);
+  aspect-ratio: 3 / 2;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
+}
+
+.aba {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    var(--vermelho-vivo) 0%,
+    #8b0000 60%,
+    #6a0000 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.corpo {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #a00010 0%,
+    var(--vermelho-medio) 40%,
+    #6a0000 100%
+  );
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+}
+
+.dobras {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dobraEsq {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.25), transparent);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  opacity: 0.3;
+}
+
+.dobraDir {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0,0,0,0.25), transparent);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  opacity: 0.3;
+}
+
+.dobraInf {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.15), transparent);
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+.seloContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}

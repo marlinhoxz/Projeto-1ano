@@ -1,0 +1,42 @@
+.tela {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 5rem 1.5rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.areaCarta {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+
+  padding-top: 60px;
+}
+
+.containerRosa {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.containerPapel {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.areaEnvelopeInferior {
+  width: 100%;
+  max-width: 360px;
+}
