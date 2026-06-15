@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { itensGaleria } from "./dados-galeria"
 import ItemFoto from "./ItemFoto"
 import styles from "./TelaGaleria.module.css"
-
+import HorizontalScroll from "../scrollHorizon/scrollHorizin"
 
 const ALTURA_POR_ITEM = 480
 
@@ -24,10 +24,8 @@ export default function TelaGaleria({ aoAvancarParaSegundaCarta }: PropsTelaGale
         <h2 className={styles.titulo}>as nossas histórias</h2>
       </header>
 
-      
+      {/* Sua lista vertical original continua renderizando aqui */}
       <div className={styles.areaGaleria} style={{ minHeight: alturaGaleria }}>
-       
-
         <div className={styles.listaFotos}>
           {itensGaleria.map((item, indice) => (
             <ItemFoto key={item.id} item={item} indice={indice} />
@@ -35,7 +33,12 @@ export default function TelaGaleria({ aoAvancarParaSegundaCarta }: PropsTelaGale
         </div>
       </div>
 
-   
+      {/* O componente de scroll horizontal entra logo após a lista terminar, 
+          em uma div própria para isolar o efeito do GSAP */}
+      <div style={{ width: "100%", clear: "both" }}>
+        <HorizontalScroll />  
+      </div>
+      
       <footer className={styles.rodape}>
         <p className={styles.textoRodape}>ainda tem mais...</p>
         <button
