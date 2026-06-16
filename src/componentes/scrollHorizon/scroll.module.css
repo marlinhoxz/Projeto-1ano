@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: rgb(49, 0, 0);
+  background: rgba(99, 8, 8, 0.445);
   overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  right: 9;
+  right: 0;
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 
 .cabecalhoLabel {
   font-family: var(--fonte-corpo);
-  font-size: 0.80rem;
+  font-size: 0.68rem;
   font-style: italic;
   letter-spacing: 0.28em;
   text-transform: lowercase;
@@ -54,7 +54,6 @@
   background: var(--ouro);
   opacity: 0.3;
   margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
 }
 
 /* ── HUD ── */
@@ -117,7 +116,7 @@
 
 .hintTexto {
   font-family: var(--fonte-corpo);
-  font-size: 0.80rem;
+  font-size: 0.85rem;
   font-style: italic;
   letter-spacing: 0.2em;
   text-transform: lowercase;
@@ -145,7 +144,6 @@
   width: max-content;
   height: 100vh;
   will-change: transform;
-  margin-top: 1rem;
 }
 
 .espacoInicial {
@@ -159,11 +157,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-shrink: 0;
   width: 100vw;
   height: 100vh;
   padding: 0 6vw;
-  gap: 0;
 }
 
 /* linhas verticais decorativas nas bordas do frame */
@@ -186,13 +182,13 @@
 .bordaTop { left: 3vw; }
 .bordaBot { right: 3vw; }
 
-/* ── Lado esquerdo: textos ── */
+/* ── Lado direito: textos ── */
 .lado {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 0 0 38%;
-  padding-right: 5vw;
+  padding-left: 5vw;
 }
 
 /* linha ouro vertical ornamental */
@@ -210,6 +206,7 @@
   flex: 0 0 52%;
   height: 78vh;
   overflow: hidden;
+   border-radius: 20px;
 }
 
 /* máscara de reveal */
@@ -229,23 +226,25 @@
 .foto {
   object-fit: cover;
   object-position: center;
+  border-radius: 20px;
 }
 
-/* vinheta — funde borda esquerda com o negro */
+/* vinheta — funde borda direita com o negro */
 .vinheta {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(0, 0, 0, 0.55) 0%, transparent 28%),
+    linear-gradient(to left, rgba(0,0,0,0.55) 0%, transparent 28%),
     radial-gradient(ellipse at center, transparent 52%, rgba(0,0,0,0.4) 100%);
   pointer-events: none;
 }
+
+/* ── Textos ── */
 
 
 .legendaTitulo {
   font-family: var(--fonte-titulo);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-  text-transform: uppercase;
   font-weight: 400;
   font-style: italic;
   color: var(--ouro-claro);
@@ -258,14 +257,13 @@
 
 .legendaDesc {
   font-family: var(--fonte-corpo);
-  font-size: clamp(0.85rem, 1.3vw, 1.3rem);
+  font-size: clamp(0.85rem, 1.3vw, 1.5rem);
   font-weight: 300;
   font-style: italic;
   line-height: 1.85;
   color: var(--creme-escuro);
   opacity: 0;
   max-width: 28ch;
-  margin: 0;
 }
 
 /* ── Encerramento ── */
@@ -273,22 +271,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30vw;
-  
+  width: 60vw;
 }
 
 .fimTexto {
+  width: 100%;
   font-family: var(--fonte-corpo);
-  font-size: 0.6rem;
+  text-align: center;
+  font-size: 1.5rem;
   font-style: italic;
   letter-spacing: 0.2em;
-  text-transform: lowercase;
-  color: var(--ouro);
-  opacity: 0.22;
+  color: var(--ouro-claro);
   white-space: nowrap;
 }
 
-/* ── Esfumaçados laterais ── */
 
 
 .fadeEsq {

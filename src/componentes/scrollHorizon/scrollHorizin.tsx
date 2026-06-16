@@ -182,14 +182,7 @@ export default function GaleriaMemórias() {
               <div className={styles.bordaTop} data-bt aria-hidden="true" />
               <div className={styles.bordaBot} data-bb aria-hidden="true" />
 
-              {/* ── esquerda: textos ── */}
-              <div className={styles.lado}>
-                <div className={styles.linhaVert} data-lv aria-hidden="true" />         
-                <h3 className={styles.legendaTitulo} data-titulo>{m.titulo}</h3>
-                <p className={styles.legendaDesc} data-desc>{m.descricao}</p>
-              </div>
-
-              {/* ── direita: foto ── */}
+              {/* ── esquerda: foto ── */}
               <div className={styles.fotoArea}>
                 <div className={styles.mascara} data-mascara>
                   <div className={styles.fotoWrap} data-foto>
@@ -203,6 +196,13 @@ export default function GaleriaMemórias() {
                     <div className={styles.vinheta} aria-hidden="true" />
                   </div>
                 </div>
+              </div>
+
+              {/* ── direita: textos ── */}
+              <div className={styles.lado}>
+                <div className={styles.linhaVert} data-lv aria-hidden="true" />
+                <h3 className={styles.legendaTitulo} data-titulo>{m.titulo}</h3>
+                <p className={styles.legendaDesc} data-desc>{m.descricao}</p>
               </div>
 
             </article>
