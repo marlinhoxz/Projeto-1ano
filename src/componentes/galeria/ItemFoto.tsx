@@ -19,7 +19,6 @@ export default function ItemFoto({ item, indice }: PropsItemFoto) {
   const fotoRef = useRef<HTMLDivElement>(null);
   const legendaRef = useRef<HTMLParagraphElement>(null);
 
-
   const ehPar = indice % 2 === 0;
 
   return (
@@ -38,8 +37,8 @@ export default function ItemFoto({ item, indice }: PropsItemFoto) {
           />
         </div>
 
-         <div className={styles.bordaMoldura} aria-hidden="true" />
-      </div> 
+        <div className={styles.bordaMoldura} aria-hidden="true" />
+      </div>
 
       <p ref={legendaRef} className={styles.legenda}>
         {item.legenda}

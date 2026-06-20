@@ -42,7 +42,7 @@ export default function EnvelopeInicial({
       rotate: 0,
       duration: 0.08,
     });
-    
+
     linha.to(aba, {
       scaleY: -1,
       rotateX: 180,

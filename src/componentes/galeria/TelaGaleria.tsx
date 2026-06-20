@@ -1,30 +1,34 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { itensGaleria } from "./dados-galeria"
-import ItemFoto from "./ItemFoto"
-import styles from "./TelaGaleria.module.css"
-import HorizontalScroll from "../scrollHorizon/scrollHorizin"
+import { useRef } from "react";
+import { itensGaleria } from "./dados-galeria";
+import ItemFoto from "./ItemFoto";
+import styles from "./TelaGaleria.module.css";
+import HorizontalScroll from "../scrollHorizon/scrollHorizin";
 
-const ALTURA_POR_ITEM = 480
+const ALTURA_POR_ITEM = 480;
 
 type PropsTelaGaleria = {
-  aoAvancarParaSegundaCarta: () => void
-}
+  aoAvancarParaSegundaCarta: () => void;
+};
 
-export default function TelaGaleria({ aoAvancarParaSegundaCarta }: PropsTelaGaleria) {
-  const secaoRef = useRef<HTMLElement>(null)
-  const alturaGaleria = itensGaleria.length * ALTURA_POR_ITEM
+export default function TelaGaleria({
+  aoAvancarParaSegundaCarta,
+}: PropsTelaGaleria) {
+  const secaoRef = useRef<HTMLElement>(null);
+  const alturaGaleria = itensGaleria.length * ALTURA_POR_ITEM;
 
   return (
-    <section ref={secaoRef} className={styles.tela} aria-label="Galeria de fotos">
-    
+    <section
+      ref={secaoRef}
+      className={styles.tela}
+      aria-label="Galeria de fotos"
+    >
       <header className={styles.cabecalho}>
         <p className={styles.subtitulo}>um ano de memórias</p>
         <h2 className={styles.titulo}>as nossas histórias</h2>
       </header>
 
-      {/* Sua lista vertical original continua renderizando aqui */}
       <div className={styles.areaGaleria} style={{ minHeight: alturaGaleria }}>
         <div className={styles.listaFotos}>
           {itensGaleria.map((item, indice) => (
@@ -33,12 +37,10 @@ export default function TelaGaleria({ aoAvancarParaSegundaCarta }: PropsTelaGale
         </div>
       </div>
 
-      {/* O componente de scroll horizontal entra logo após a lista terminar, 
-          em uma div própria para isolar o efeito do GSAP */}
       <div style={{ width: "100%", clear: "both" }}>
-        <HorizontalScroll />  
+        <HorizontalScroll />
       </div>
-      
+
       <footer className={styles.rodape}>
         <p className={styles.textoRodape}>ainda tem mais...</p>
         <button
@@ -46,10 +48,12 @@ export default function TelaGaleria({ aoAvancarParaSegundaCarta }: PropsTelaGale
           onClick={aoAvancarParaSegundaCarta}
           aria-label="Ver a carta final"
         >
-          <span className={styles.setaBaixo} aria-hidden="true">↓</span>
+          <span className={styles.setaBaixo} aria-hidden="true">
+            ↓
+          </span>
           continuar
         </button>
       </footer>
     </section>
-  )
+  );
 }

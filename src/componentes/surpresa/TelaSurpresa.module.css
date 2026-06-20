@@ -1,0 +1,327 @@
+.tela {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    #3d0008 0%,
+    var(--vermelho-escuro) 50%,
+    #0d0000 100%
+  );
+}
+
+.cena {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.cena canvas {
+  display: block;
+}
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 2rem 1.5rem 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.subtitulo {
+  font-family: var(--fonte-corpo);
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.28em;
+  text-transform: lowercase;
+  color: var(--ouro);
+  opacity: 0.6;
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--creme);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.65);
+}
+
+.linhaOuro {
+  width: 30px;
+  height: 1px;
+  background: var(--ouro);
+  opacity: 0.3;
+  margin-top: 0.2rem;
+}
+
+.instrucao {
+  margin-top: 0.65rem;
+  font-family: var(--fonte-corpo);
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.16em;
+  text-transform: lowercase;
+  color: var(--ouro-claro);
+  opacity: 0.42;
+}
+
+.progresso {
+  position: fixed;
+  top: 50%;
+  right: 1.1rem;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  pointer-events: none;
+}
+
+.ponto {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ouro);
+  opacity: 0.18;
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.pontoAtivo {
+  opacity: 0.95;
+  transform: scale(1.35);
+  box-shadow: 0 0 10px rgba(232, 201, 122, 0.65);
+}
+
+.hint {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-family: var(--fonte-corpo);
+  font-size: 0.8rem;
+  font-style: italic;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  color: var(--ouro);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.painel {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(13, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+  animation: aparecePainel 0.4s var(--easing-suave) forwards;
+}
+
+@keyframes aparecePainel {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cartao {
+  position: relative;
+  width: min(480px, 92vw);
+  max-height: 88dvh;
+  overflow-y: auto;
+  display: grid;
+  gap: 1rem;
+  padding: 1.35rem;
+  border-radius: 18px;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: linear-gradient(
+    165deg,
+    rgba(74, 0, 0, 0.96) 0%,
+    rgba(30, 0, 0, 0.98) 100%
+  );
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(201, 168, 76, 0.08);
+  animation: sobeCartao 0.5s var(--easing-suave) forwards;
+}
+
+@keyframes sobeCartao {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.25rem;
+}
+
+.navBtn {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(201, 168, 76, 0.22);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--ouro-claro);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.navBtn:hover {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.contador {
+  font-family: var(--fonte-titulo);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ouro);
+  opacity: 0.65;
+  letter-spacing: 0.08em;
+}
+
+.fechar {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ouro-claro);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  z-index: 1;
+}
+
+.fechar:hover {
+  background: rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.45);
+}
+
+.fotoWrap {
+  border-radius: 14px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.foto {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 48dvh;
+  object-fit: contain;
+}
+
+.textosCartao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0 0.25rem 0.25rem;
+}
+
+.tituloCartao {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ouro-claro);
+  line-height: 1.15;
+}
+
+.descricaoCartao {
+  font-family: var(--fonte-corpo);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--creme-escuro);
+}
+
+/* Rótulos 3D criados pelo Three.js */
+:global(.galaxia-rotulo) {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+  font-style: italic;
+  color: var(--ouro-claro);
+  letter-spacing: 0.03em;
+  background: rgba(26, 0, 0, 0.45);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  text-shadow: 0 0 14px rgba(232, 201, 122, 0.45);
+  backdrop-filter: blur(4px);
+  transition:
+    transform 0.25s var(--easing-suave),
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+
+:global(.galaxia-rotulo:hover) {
+  transform: scale(1.08);
+  border-color: rgba(232, 201, 122, 0.55);
+  box-shadow: 0 0 20px rgba(232, 201, 122, 0.35);
+}
+
+:global(.galaxia-frase) {
+  font-family: var(--fonte-corpo);
+  font-size: clamp(0.65rem, 1.1vw, 0.78rem);
+  font-style: italic;
+  color: var(--creme-escuro);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  background: none;
+  border: none;
+  padding: 0.2rem 0.4rem;
+  cursor: default;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(201, 168, 76, 0.35);
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .cabecalho {
+    padding-top: 1.35rem;
+  }
+
+  .progresso {
+    top: auto;
+    bottom: 3.2rem;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+    gap: 0.35rem;
+  }
+
+  :global(.galaxia-rotulo) {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.65rem;
+  }
+}

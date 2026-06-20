@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import styles from "./carimbo.module.css"
+import styles from "./carimbo.module.css";
 
 type PropsCarimboSelo = {
-  aoClicar: () => void
-  tamanho?: "normal" | "grande"
-  titulo?: string
-}
+  aoClicar: () => void;
+  tamanho?: "normal" | "grande";
+  titulo?: string;
+};
 
 export default function CarimboSelo({
   aoClicar,
@@ -22,11 +22,7 @@ export default function CarimboSelo({
     >
       <div className={styles.circuoExterno}>
         <div className={styles.circuloInterno}>
-          <svg
-            viewBox="0 0 60 60"
-            className={styles.icone}
-            aria-hidden="true"
-          >
+          <svg viewBox="0 0 60 60" className={styles.icone} aria-hidden="true">
             <text
               x="50%"
               y="50%"
@@ -43,5 +39,5 @@ export default function CarimboSelo({
       </div>
       <span className={styles.textoClick}>clique aqui</span>
     </button>
-  )
+  );
 }

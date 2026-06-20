@@ -1,4 +1,4 @@
-import styles from "./LacoDecorativo.module.css"
+import styles from "./LacoDecorativo.module.css";
 
 export default function LacoDecorativo() {
   return (
@@ -8,7 +8,6 @@ export default function LacoDecorativo() {
         xmlns="http://www.w3.org/2000/svg"
         className={styles.svg}
       >
-        
         <path
           d="M80 60 C60 40, 20 30, 15 50 C10 70, 40 80, 80 60 Z"
           fill="#8b0000"
@@ -31,7 +30,6 @@ export default function LacoDecorativo() {
           opacity="0.5"
         />
 
-   
         <path
           d="M75 65 C70 85, 55 100, 50 120"
           stroke="#7a0000"
@@ -48,7 +46,6 @@ export default function LacoDecorativo() {
           opacity="0.5"
         />
 
-  
         <path
           d="M85 65 C90 85, 105 100, 110 120"
           stroke="#7a0000"
@@ -65,11 +62,9 @@ export default function LacoDecorativo() {
           opacity="0.5"
         />
 
-   
         <ellipse cx="80" cy="60" rx="10" ry="8" fill="#6a0000" />
         <ellipse cx="80" cy="58" rx="6" ry="4" fill="#8b0010" opacity="0.8" />
 
-    
         <path
           d="M40 42 Q50 38 60 45"
           stroke="rgba(255,150,150,0.25)"
@@ -90,5 +85,5 @@ export default function LacoDecorativo() {
         </defs>
       </svg>
     </div>
-  )
+  );
 }

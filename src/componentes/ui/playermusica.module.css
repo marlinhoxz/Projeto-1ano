@@ -1,0 +1,70 @@
+.botao {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: rgba(20, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  color: var(--ouro-claro, #e8c97a);
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    transform 0.2s;
+}
+
+.botao:hover {
+  background: rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.5);
+  transform: scale(1.04);
+}
+
+.icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barras {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 14px;
+}
+
+.barras i {
+  display: block;
+  width: 2px;
+  height: 6px;
+  border-radius: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.animada {
+  animation: pulsarBarra 0.9s ease-in-out infinite;
+}
+
+.barras i:nth-child(2).animada {
+  animation-delay: 0.15s;
+}
+
+.barras i:nth-child(3).animada {
+  animation-delay: 0.3s;
+}
+
+@keyframes pulsarBarra {
+  0%,
+  100% {
+    height: 5px;
+  }
+  50% {
+    height: 14px;
+  }
+}

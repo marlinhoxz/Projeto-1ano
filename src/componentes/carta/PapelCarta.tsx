@@ -1,7 +1,6 @@
 import BatomDecorativo from "./BatomDecorativo";
 import styles from "./papelcarta.module.css";
 
-// Texto editável — substitua pelo seu próprio
 const TEXTO_CARTA = {
   saudacao: "Para a minha pessoa favorita,",
   paragrafos: [

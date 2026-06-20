@@ -1,21 +1,15 @@
 .papel {
   position: relative;
   width: 100%;
-  background: linear-gradient(
-    175deg,
-    #fdf8f0 0%,
-    #f5ede0 40%,
-    #ede0cc 100%
-  );
+  background: linear-gradient(175deg, #fdf8f0 0%, #f5ede0 40%, #ede0cc 100%);
   border-radius: 2px;
   box-shadow:
     0 4px 24px rgba(0, 0, 0, 0.35),
     inset 0 0 40px rgba(0, 0, 0, 0.04);
-  background-image: url("/assets/papelimg.jpg"); 
+  background-image: url("/assets/papelimg.webp");
   background-size: cover;
   background-position: center;
 }
-
 
 .conteudo {
   padding: 2rem 1.8rem 1.5rem;
