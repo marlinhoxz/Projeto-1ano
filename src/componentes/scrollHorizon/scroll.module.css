@@ -280,9 +280,9 @@
   font-weight: 300;
   font-style: italic;
   line-height: 1.85;
-  color: var(--creme-escuro);
+  color: var(--creme);
   opacity: 0;
-  max-width: 28ch;
+  max-width: 48ch;
 }
 
 .espacoFinal {
@@ -294,11 +294,149 @@
 
 .fimTexto {
   width: 100%;
-  font-family: var(--fonte-corpo);
+  font-family: var(--fonte-titulo);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: italic;
   letter-spacing: 0.2em;
-  color: var(--ouro-claro);
+  color: var(--creme-escuro);
   white-space: nowrap;
+}
+
+
+@media (max-width: 968px) {
+  .cabecalhoTitulo {
+    font-size: clamp(1.2rem, 4vw, 1.7rem);
+  }
+
+  .hud {
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+
+  .frame {
+    padding: 0 8vw;
+    gap: 4vw;
+  }
+
+  .lado {
+    flex: 0 0 42%;
+    padding-left: 4vw;
+  }
+
+  .fotoArea {
+    max-width: 44vw;
+  }
+
+  .foto {
+    max-width: 44vw;
+  }
+
+  .legendaTitulo {
+    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+  }
+
+  .legendaDesc {
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+    max-width: 24ch;
+  }
+
+  .bordaTop {
+    left: 4vw;
+  }
+  .bordaBot {
+    right: 4vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .cabecalho {
+    padding: 1.4rem 1rem 0;
+    gap: 0.2rem;
+  }
+
+  .cabecalhoLabel {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+
+  .cabecalhoTitulo {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+
+  .hud {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .hudNum {
+    font-size: 0.75rem;
+  }
+
+  .hint {
+    bottom: 1.2rem;
+  }
+
+  .hintTexto {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .frame {
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    padding: 6rem 6vw 2rem;
+    gap: 1.5rem;
+  }
+
+  .lado {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .linhaVert {
+    margin: 0 auto 1.25rem;
+  }
+
+  .fotoArea {
+    flex: 0 0 auto;
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+
+  .foto {
+    max-width: 80vw;
+    max-height: 50vh;
+  }
+
+  .legendaTitulo {
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+    margin-bottom: 0.7rem;
+  }
+
+  .legendaDesc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 32ch;
+    margin: 0 auto;
+  }
+
+  .bordaTop,
+  .bordaBot {
+    display: none;
+  }
+
+  .espacoInicial {
+    width: 10vw;
+  }
+
+  .fimTexto {
+    font-size: 1.1rem;
+    letter-spacing: 0.14em;
+    
+  }
 }

@@ -26,7 +26,7 @@ export default function TelaGaleria({
     >
       <header className={styles.cabecalho}>
         <p className={styles.subtitulo}>um ano de memórias</p>
-        <h2 className={styles.titulo}>as nossas histórias</h2>
+        <h2 className={styles.titulo}>a nossa história</h2>
       </header>
 
       <div className={styles.areaGaleria} style={{ minHeight: alturaGaleria }}>

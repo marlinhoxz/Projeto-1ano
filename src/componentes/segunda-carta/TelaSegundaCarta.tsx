@@ -10,8 +10,7 @@ import styles from "./TelaSegundaCarta.module.css"
 
 const TEXTO_SEGUNDA_CARTA = {
   mensagem: [
-    "Espero que todos os seus sonhos se realizem,",
-    "porque os meus já se realizaram quando te encontrei.",
+    "Eu tinha um monte de planos na cabeça, mas papo reto? Minha vida ficou mil vezes melhor depois que você apareceu.",
   ],
   felicitacao: "Feliz aniversário de 1 ano,",
   assinatura: "meu amor.",

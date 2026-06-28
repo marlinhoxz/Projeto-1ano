@@ -12,64 +12,64 @@ const momentos = [
   {
     id: "01",
     mes: "janeiro",
-    titulo: "o primeiro olhar",
-    descricao: "tudo começou com um sorriso que eu não consegui esquecer.",
+    titulo: "O Primeiro encontro",
+    descricao: "Quem diria que aquele pequeno encontro na chuva ia nos render historia! ",
     foto: "/assets/imgScroll/primeirorole.webp",
   },
   {
     id: "02",
     mes: "fevereiro",
-    titulo: "nossa primeira viagem",
-    descricao: "a estrada, o vento e você do meu lado — o suficiente.",
+    titulo: "O Pedido",
+    descricao: "Pensamos que ia ser algo bobo, sem continuidade, mas hoje sabemos que estávamos totalmente errados.",
     foto: "/assets/imgScroll/fotoalianca.webp",
   },
   {
     id: "03",
     mes: "março",
-    titulo: "dançando na cozinha",
-    descricao: "sem música, sem motivo. só porque sim.",
+    titulo: "Familia",
+    descricao: "Com você ganhei uma nova família, um lugar onde me acolheram com tanto amor que até hoje me vejo perdido no meio dele. E, com isso, ganhei tantas memórias e momentos inesquecíveis que vou contar com toda a alegria do meu coração.",
     foto: "/assets/imgScroll/fotodafamilia.webp",
   },
   {
     id: "04",
     mes: "abril",
-    titulo: "aquele jantar especial",
-    descricao: "a comida queimou um pouco, mas foi perfeito assim mesmo.",
+    titulo: "A Viagem",
+    descricao: "Essa viagem nos trouxe paz no meio de tantas atribulações, renovou nossos laços e nos deixou momentos que jamais vamos esquecer.",
     foto: "/assets/imgScroll/dedodedeus.webp",
   },
   {
     id: "05",
     mes: "maio",
-    titulo: "tarde de domingo",
-    descricao: "cobertor, chuva na janela e você dormindo no meu ombro.",
+    titulo: "Momentos Incriveis",
+    descricao: "E de quebra foi um presente de aniversário maravilhoso; cada instante, cada riso, cada momento foi incrível!. Obrigado!.",
     foto: "/assets/imgScroll/BeijoMontanha.webp",
   },
   {
     id: "06",
     mes: "junho",
-    titulo: "rindo sem parar",
-    descricao: "nem lembro mais o motivo. só sei que doeu de rir.",
+    titulo: "Nossa Menina",
+    descricao: "Ela também veio no pacote! No início, fiquei com aquele receio em silêncio de não dar conta do recado ou de não me encaixar. Mas o tempo voou e provou o contrário. Ver que o amor dobrou de tamanho e sentir essa sensação boa de ter mais alguém me esperando em casa... não dá nem pra explicar. É bom demais!.",
     foto: "/assets/imgScroll/escolacarla.webp",
   },
   {
     id: "07",
     mes: "julho",
-    titulo: "o beijo na chuva",
-    descricao: "clichê, sim. mas foi real e foi nosso.",
+    titulo: "Laços Fortes",
+    descricao: "Graças a Deus, quanto mais o tempo passa, mais a nossa base fica forte. A gente aprendeu a se apoiar em tudo e a se unir cada vez mais. E o principal de tudo: sempre juntos.",
     foto: "/assets/imgScroll/escadadalapa.webp",
   },
   {
     id: "08",
     mes: "agosto",
-    titulo: "nossa música",
-    descricao: "toda vez que toca, eu penso em você imediatamente.",
+    titulo: "Nossa História",
+    descricao: "E essa história? Estou amando viver cada segundo dela ao seu lado...",
     foto: "/assets/imgScroll/beijonorelogio.webp",
   },
   {
     id: "09",
     mes: "setembro",
-    titulo: "mãos dadas",
-    descricao: "sem destino certo. a melhor caminhada que já fiz.",
+    titulo: "Para sempre nós",
+    descricao: '"O amor tudo sofre, tudo crê, tudo espera, tudo suporta."',
     foto: "/assets/imgScroll/paquetamoreta.webp",
   },
 ];
@@ -309,7 +309,7 @@ export default function GaleriaMemórias() {
 
           <div className={styles.espacoFinal}>
             <p className={styles.fimTexto}>
-              fim do rolo ◆ {momentos.length} exposições
+              Feliz 1 ano juntos, TE AMO!
             </p>
           </div>
         </div>

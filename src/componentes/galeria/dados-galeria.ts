@@ -16,12 +16,12 @@ export const itensGaleria: ItemGaleria[] = [
     id: 2,
     srcFoto: "/assets/BeijoMontanha.webp",
     altFoto: "Um momento especial",
-    legenda: "Cada instante com você é perfeito",
+    legenda: "Sempre será",
   },
   {
     id: 3,
     srcFoto: "/assets/braçosaberto.webp",
     altFoto: "Nossa história",
-    legenda: "Um ano de nós",
+    legenda: "Lembrado por nós",
   },
 ];
